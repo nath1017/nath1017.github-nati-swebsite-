@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marie's Home Page</title>
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-...YOUR_HASH..." 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marie's Home Page</title>
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-...YOUR_HASH..." 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --bg-color: #221514;
+            --text-color: #ffffff;
+            --main-color: #7a1809;
+            --accent-color: #ff847c;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(122, 24, 9, 0.8); /* Semi-transparent background */
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px); /* Optional: Adds a blur effect */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            max-width: 50px;
+            height: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+            font-weight: bold; /* Make the navigation text bold */
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem 3rem;
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-color);
+            font-weight: bold; /* Make all headers bold */
+        }
+
+        h1 {
+            font-size: 4rem; /* Exact size for h1 */
+        }
+
+        h2 {
+            font-size: 2.5rem; /* Exact size for h2 */
+        }
+
+        h3 {
+            font-size: 2rem; /* Exact size for h3 */
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            padding: 4rem 5%;
+            gap: 2rem;
+        }
+
+        .hero .hero-image {
+            flex: 1 1 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 20px var(--main-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero .hero-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px var(--main-color);
+        }
+
+        .hero .hero-content {
+            flex: 1 1 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hero .hero-content h1 {
+            font-size: 4rem;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+
+        .hero .hero-content h2 {
+            font-size: 2rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .hero .hero-content p {
+            font-size: 1.2rem; /* Set exact size for paragraphs */
+            line-height: 1.8;
+            font-weight: normal; /* Keep paragraphs normal weight */
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icons a {
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--main-color);
+            border: 2px solid var(--main-color);
+            border-radius: 50%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--main-color);
+            color: var(--bg-color);
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem 5%;
+            }
+
+            .hero .hero-content {
+                align-items: center;
+            }
+
+            .hero .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero .hero-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero .hero-content p {
+                font-size: 1rem;
+            }
+
+            .hero .hero-image img {
+                max-width: 300px;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .content-box {
+            max-width: 300px;
+            background: var(--main-color);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .content-box img {
+            max-width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .content-box img:hover {
+            transform: scale(1.05);
+        }
+
+        video {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .large-video {
+            width: 80%; /* Set the width relative to the parent */
+            max-width: 1000px; /* Optional: Limit the maximum size */
+            height: auto; /* Keep the aspect ratio */
+            border-radius: 10px; /* Add rounded corners */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a shadow for emphasis */
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #caption {
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            padding: 10px 0;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--main-color);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+
+        #blog, #flex {
+            text-align: center;
+        }
+
+        #blog .content-grid, #flex .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+<!-- Content unchanged from your provided code -->
+</body>
+</html>
+
+	
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="logo.jpg" alt="Logo" onclick="goHome()"> 
+        <span>Mars' Page</span>
+    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#blog">Blog</a>
+        <a href="#flex">Flex</a>
+    </nav>
+</header>
+<br>
+<section id="home" class="hero">
+    <div class="hero-image">
+        <img src="abt.jpg" alt="Profile Picture">
+    </div>
+    <div class="hero-content">
+        <h1>Hi, I'm Marie!</h1>
+        <h2>I'm a BSEMC-DAT Student ✨</h2>
+        <p>
+            Welcome to my portfolio! I'm Marie Elaine Jasmine L. Guyot, a 19-year-old student passionate about art and technology. 
+            Here, you'll find my works, blog posts, and more about my creative journey.
+        </p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/marieej.guyot" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/4zmin3" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:guyot.marieej@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</section>
+</br>
+<div class="section">
+    <div class="content-grid">
+	        <div class="content-box">
+			 <h3>About Mars</h3>
+			<img src="mario.jpg"class="fixed-size">
+			<br>
+	<p> Passionate about combining my love for creativity with technology to create digital content. With every activity, I work hard to develop both my artistic and technical skills. </p>
+</div>
+
+        <div class="content-box">
+            <h3>Hobbies</h3>
+			<img src="hob.jpg"class="fixed-size">
+<br>
+            <p>Loves to unwind by drawing to express myself creatively. Also likes to relax by watching youtube videos. These hobbies help me stay balanced while developing new skills for my future career.</p>
+</div>
+
+        <div class="content-box">
+            <h3>Skills</h3>
+			<img src="pic01.png"class="fixed-size">
+<br>
+            <p>As an average artist, my skills reflect a solid foundation in creativity and technique, with room for growth and refinement through consistent practice and exploration.<p>
+</br>        </div>
+
+	        <div class="content-box">
+		<h1><p> How do I see Myself 8 years from now on? </p>
+		<br>
+			<video width="990" height="350" controls>
+			<source src="how.mp4"type="video/mp4">
+		</br>
+		</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="blog">
+    <h2>Blog Entries</h2>
+    <div class="content-grid">
+        <div class="content-box">
+            <h3>Infographics</h3>
+            <img src="Group 4_Guyot.jpg" onclick="openModal(this)" alt="Infographics">
+        </div>
+        <div class="content-box">
+            <h3>Cybercrime Case Activity</h3>
+            <img src="Group-1-GUYOT_pages-to-jpg-0001.jpg" onclick="openModal(this)" alt="Cybercrime Case Page 1">
+            <img src="Group-1-GUYOT_pages-to-jpg-0002.jpg" onclick="openModal(this)" alt="Cybercrime Case Page 2">
+        </div>
+        <div class="content-box">
+            <h3>HTML 1st Activity</h3>
+            <img src="Guyot_Activity_01_page-0001.jpg" onclick="openModal(this)" alt="HTML Activity">
+        </div>
+        <div class="content-box">
+            <h3>Wireframe</h3>
+           <iframe src="Guyot_PortfolioWireframe.pdf" width="100%" height="600px" style="border: none;"></iframe>
+        </div>
+        <div class="content-box">
+            <h3>Technology Trends</h3>
+            <img src="Quadrumvirate + 1_Guyot.png" onclick="openModal(this)" alt="Technology Trends">
+        </div>
+        <div class="content-box">
+            <h3>HTML 1st Activity</h3>
+            <h3>Lessons that I learned</h3>
+            <p>
+				My Introduction to Computing class opened my eyes to how the CPU, memory, and storage devices work together, with the Operating System acting as a mediator to keep everything running smoothly. Learning algorithms taught me to break down problems step by step, a skill I’ve found helpful in many areas of life. Exploring HTML and CSS sparked my creativity, showing me how coding can bring structure and design together in exciting ways.            </p>
+        </div>
+        <div class="content-box">
+		<h3>Overcoming Challenges</h3>
+            <p>
+I really enjoyed working with HTML and CSS in my Introduction to Computing class because it felt like bringing ideas to life—building a webpage’s structure with HTML and then transforming it with CSS into something visually exciting. What fascinated me the most was how even small tweaks in the code could completely change the look and feel of the page, and experimenting with layouts and colors was so much fun. At the same time, I struggled with understanding CSS positioning and making designs responsive across different screens, which often led to a lot of trial and error. Looking back, though, those challenges are what made me appreciate the art and complexity of web design even more—it’s incredibly satisfying to turn a messy layout into something polished and functional.            </p>
+		</div>
+    </div>
+</section>
+
+<section id="flex">
+    <h2>My Projects</h2>
+    <div class="content-grid">
+        <div class="content-box">
+            <h1><p>Bouncing Ball</p>
+			<br>
+            <video autoplay muted loop controls>
+                <source src="bouncing ball_GUYOT.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="content-box">
+            <h1><p>Walking Stickman</p>
+			<br>
+            <video autoplay muted loop controls>
+                <source src="stickman_guyot.mp4" type="video/mp4 " onclick="goHome()">
+            </video>
+        </div>
+		
+	        <div class="content-box">
+		<h1><p> Talaandig painting </p>
+		<br>
+				<img src="talaandig.jpg"onclick="openModal(this)"class="fixed-size"alt="Talaandig painting">
+		</br>
+		</div>
+		
+	        <div class="content-box">
+		<h1><p> Soil painting presented at City Hall of Malaybalay city </p>
+		<br>
+				<img src="soil2.jpg"onclick="openModal(this)"class="fixed-size"alt="Soil Painting">
+		</br>
+		</div>
+		
+	        <div class="content-box">
+		<h1><p> Watercolor works (Pear Girl)</p>
+		<br>
+				<img src="classical.jpg"onclick="openModal(this)"class="fixed-size"alt="Pearl Girl">
+		</br>
+		</div>
+
+			<div class="content-box">
+		<h1><p> Watercolor works (Modern)</p>
+		<br>
+				<img src="modern.jpg"onclick="openModal(this)"class="fixed-size"alt="Modern Art">
+		</br>
+		</div>
+
+			<div class="content-box">
+		<h1><p> Watercolor works (Miming)</p>
+		<br>
+				<img src="mimir.jpg"onclick="openModal(this)"class="fixed-size"alt="Miming">
+		</br>
+		</div>
+
+			<div class="content-box">
+		<h1><p> Watercolor works</p>
+		<br>
+				<img src="ambot.jpg"onclick="openModal(this)"class="fixed-size"alt="Other watercolor works">
+		</br>
+		</div>
+
+			<div class="content-box">
+		<h1><p> Watercolor works (Anime)</p>
+		<br>
+				<img src="hanako.jpg"onclick="openModal(this)"class="fixed-size"alt="Hanako">
+		</br>
+		</div>
+				
+			<div class="content-box">
+		<h1><p> Watercolor works (Anime)</p>
+		<br>
+				<img src="anime.jpg"onclick="openModal(this)"class="fixed-size"alt="Hanako">
+		</br>
+		</div>
+				
+			<div class="content-box">
+		<h1><p> Watercolor works (Commissioned Works)</p>
+		<br>
+				<img src="other.jpg"onclick="openModal(this)"class="fixed-size"alt="Commissions">
+		</br>
+		</div>
+				
+			<div class="content-box">
+		<h1><p> Pastels</p>
+		<br>
+				<img src="pastel.png"onclick="openModal(this)"class="fixed-size"alt="Pastels">
+				<img src="pastel2.png"onclick="openModal(this)"class="fixed-size"alt="Pastels">
+		</br>
+		</div>
+		
+			<div class="content-box">
+		<h1><p> Sketches </p>
+		<br>
+				<img src="free.png"onclick="openModal(this)"class="fixed-size"alt="Sketches">
+				<img src="free2.jpg"onclick="openModal(this)"class="fixed-size"alt="Art trade">
+		</br>
+		</div>
+		
+			<div class="content-box">
+		<h1><p> Editorial Cartooning </p>
+		<br>
+				<img src="cartoon.png"onclick="openModal(this)"class="fixed-size"alt="Editorial Cartooning">
+				<img src="cartoon2.png"onclick="openModal(this)"class="fixed-size"alt="Editorial Cartooning">
+				<img src="cartoon3.png"onclick="openModal(this)"class="fixed-size"alt="Editorial Cartooning">
+		</br>
+		</div>
+		
+			<div class="content-box">
+		<h1><p> Digital works</p>
+		<br>
+				<img src="digital.png"onclick="openModal(this)"class="fixed-size"alt="Commissions">
+		</br>
+		</div>
+    </div>
+</section>
+
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage" alt="">
+    <div id="caption"></div>
+</div>
+
+<footer>
+    <p>Version 1.0 | Created by Marie Elaine Jasmine L. Guyot</p>
+</footer>
+
+<script>
+    function goHome() {
+        window.location.href = "#home"; 
+    }
+
+    function openModal(img) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const caption = document.getElementById("caption");
+
+        if (img && img.src) {
+            modal.style.display = "flex";
+            modalImg.src = img.src;
+            caption.innerHTML = img.alt || "No description available.";
+        }
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none";
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = ""; // Clear modal image
+    }
+</script>
+</body>
+</html>

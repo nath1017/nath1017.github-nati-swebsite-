@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: skyblue;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .content {
+            padding: 20px;
+            margin-left: 220px;
+        }
+        .header, .footer {
+            background-color: #111;
+            color: skyblue;
+            text-align: center;
+            padding: 20px;
+        }
+        .footer {
+            margin-top: 50px;
+        }
+        .navigation {
+            position: fixed;
+            top: 100px;
+            right: 10px;
+            background-color: #111;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .navigation a {
+            display: block;
+            color: skyblue;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .navigation a:hover {
+            background-color: rgba(0, 0, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* Circuit Lines Background */
+        .background-circuit {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/triangles.png'); /* Replace with your circuit lines image */
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        /* Sections Styling */
+        .sky-blue-background {
+            background-color: skyblue;
+            color: black;
+            padding: 10px;
+            margin: 15px 0;
+        }
+
+        .big-text {
+            font-size: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-top: 30px;
+        }
+
+        .highlight {
+            background-color: #00f0ff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        /* Responsive Layout */
+        @media screen and (max-width: 768px) {
+            .content {
+                margin-left: 20px;
+            }
+            .navigation {
+                top: 50px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-circuit"></div>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>My Personal Website</h1>
+        <p>Explore my journey, blog, and creative flexes!</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navigation">
+        <a href="#home">Home Page</a>
+        <a href="#itiii-blog">ITIII Blog</a>
+        <a href="#flex">Flex</a>
+    </div>
+
+    <!-- Content Area -->
+
+    <!-- Home Page Section -->
+    <div id="home" class="content">
+        <h2 class="section-title">Self-Introduction</h2>
+        <div class="sky-blue-background">
+            <p><strong>Hobbies:</strong> Reading, Coding, Gaming</p>
+            <p><strong>Skills:</strong> Web Development, Graphic Design, Problem Solving</p>
+            <p><strong>Other Interests:</strong> Artificial Intelligence, Music, Philosophy</p>
+        </div>
+
+        <h2 class="section-title">Social Media</h2>
+        <div class="sky-blue-background">
+            <p><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+            <p><a href="https://www.github.com" target="_blank">GitHub</a></p>
+            <p><a href="https://www.twitter.com" target="_blank">Twitter</a></p>
+        </div>
+
+        <h2 class="section-title">How I See Myself 8 Years from Now</h2>
+        <div class="sky-blue-background">
+            <p>I envision myself as a tech innovator working in AI or Data Science, building tools that make the world a better place.</p>
+            <!-- Optionally, you can embed a video or infographic here -->
+        </div>
+    </div>
+
+    <!-- ITIII Blog Page Section -->
+    <div id="itiii-blog" class="content">
+        <h2 class="section-title">ITIII Blog</h2>
+        <div class="sky-blue-background">
+            <h3 class="big-text">Output / Learnings Every Lesson</h3>
+            <p>Here, I share my journey of learning new technologies, coding languages, and IT concepts.</p>
+            <h3 class="big-text highlight">Highlight: Favorite Lesson</h3>
+            <p>The most challenging yet rewarding lesson was learning about <strong>AI Neural Networks</strong>, where I delved into deep learning algorithms and their applications.</p>
+        </div>
+    </div>
+
+    <!-- Flex Page Section -->
+    <div id="flex" class="content">
+        <h2 class="section-title">Flex Your Creativity</h2>
+        <div class="sky-blue-background">
+            <p>I am particularly proud of my achievement in web development, having built several websites and applications that have impacted my community. Here's one of my proudest works:</p>
+            <!-- Include an image or showcase your work here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 My Personal Website</p>
+        <p>Version 1.0 | Credits: OpenAI, Resources from the web</p>
+    </div>
+
+</body>

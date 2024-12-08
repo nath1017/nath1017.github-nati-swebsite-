@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: skyblue;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        h1, h2, h3 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .header, .footer {
+            background-color: #111;
+            color: skyblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer {
+            margin-top: 50px;
+        }
+
+        /* Navigation Styles */
+        .navigation {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background-color: #111;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .navigation a {
+            display: block;
+            color: skyblue;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .navigation a:hover {
+            background-color: rgba(0, 0, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* Profile and Logo */
+        .profile-logo {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .profile-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 10px;
+			
+        }
+
+        .logo {
+            top: 20px;
+            left: 20px;
+			margin-left: 30px;
+			margin-top: 30px;
+
+        }
+		.fb{
+			width:10%;
+			height:10%;
+			border-radius: 10%;
+		
+		}
+		.bnd img{
+			width: 16%;
+			height: 16%;
+			border-radius: 10%;
+		}
+
+        .logo img {
+            width: 100px;
+            height: auto;
+			border-radius: 100%;
+        }
+
+        .profile-logo p, .logo p {
+            color: skyblue;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Circuit Background */
+        .background-circuit {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('bg.gif'); 
+			background-blend-mode: multiply;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        /* Content Styling */
+        .content {
+            padding: 20px;
+            margin-right: 240px; /* Space for navigation bar */
+            margin-top: 60px;
+        }
+
+        .sky-blue-background {
+            background-color: skyblue;
+            color: black;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+		.socmed{
+			 width: 10px;
+            height: 10;
+			border-radius: 10%;
+			
+		}
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-top: 30px;
+        }
+
+        .highlight {
+            background-color: #00f0ff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .big-text {
+            font-size: 2rem;
+        }
+
+        /* Responsive Layout */
+        @media screen and (max-width: 768px) {
+            .content {
+                margin-right: 20px;
+            }
+
+            .navigation {
+                top: 50px;
+                right: 10px;
+            }
+
+            .profile-logo {
+                top: 10px;
+                right: 10px;
+            }
+
+            .logo img {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-circuit"></div>
+
+
+    <!-- Profile -->
+    <div class="profile-logo">
+        <img src="picturenako.jpg" alt="Profile Picture"> <!-- Replace with your own profile image -->
+    </div>
+	
+	<!-- Logo -->
+    <div class="logo">
+        <img src="logo.jpg" alt="Logo"> <!-- Replace with your own logo image -->
+   
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>My Personal Website</h1>
+        <p>Explore my journey, blog, and creative flexes!</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navigation">
+        <a href="#home">Home Page</a>
+        <a href="#itiii-blog">ITIII Blog</a>
+        <a href="#flex">Flex</a>
+    </div>
+
+    <!-- Content Area -->
+
+    <!-- Home Page Section -->
+    <div id="home" class="content">
+        <h2 class="section-title">Self-Introduction</h2>
+        <div class="sky-blue-background">
+		<p><strong>I'm Nath, a creative and versatile individual passionate about music, innovation, and artistic expression. With a multifaceted background spanning music performance, composition, and production, I bring a unique perspective to every project.</strong>
+
+            <p><strong>Hobbies:</strong> Reading, Playing Inatruments, Baking</p>
+            <p><strong>Skills:</strong>  Graphic Design, Editing</p>
+            <p><strong>Other Interests:</strong> Sports, Music, Philosophy</p>
+        </div>
+
+        <h2 class="section-title">Social Media</h2>
+        <div class="socmed">
+            <p><a href="https://web.facebook.com/nathalie.arellano.39/" target="_blank"><img src="facebook.png" alt="Logo" class="fb""></a></p>
+            <p><a href="https://www.instagram.com/natiiii_29/" target="_blank">Instagram</a></p>
+            <p><a href="arellanonathalie@gmail.com" target="_blank">Gmail</a></p>
+        </div>
+
+        <h2 class="section-title">How I See Myself 8 Years from Now</h2>
+        <div class="sky-blue-background">
+            <p>I envision myself as a musical icon, breaking boundaries and pushing the limits of creativity.</p>
+            <!-- Optionally, you can embed a video or infographic here -->
+        </div>
+    </div>
+
+    <!-- ITIII Blog Page Section -->
+    <div id="itiii-blog" class="content">
+        <h2 class="section-title">ITIII Blog</h2>
+        <div class="sky-blue-background">
+            <h3 class="big-text">Output / Learnings Every Lesson</h3>
+            <p>Here, I share my journey of learning new technologies, coding languages, and IT concepts.</p>
+            <h3 class="big-text highlight">Highlight: Favorite Lesson</h3>
+            <p>The most challenging yet rewarding lesson was learning about <strong>AI Neural Networks</strong>, where I delved into deep learning algorithms and their applications.</p>
+        </div>
+    </div>
+
+    <!-- Flex Page Section -->
+    <div id="flex" class="content">
+        <h2 class="section-title">Flex Your Creativity</h2>
+        <div class="sky-blue-background">
+            <p>I am particularly proud of my achievement Being part of this remarkable band has fueled my passion for music and driven me to push boundaries. I'm proud of our achievements and excited for what's to come! Here's one of my proudest works:</p>
+            <!-- Include an image or showcase your work here -->
+			<div class="bnd">
+				<img src="band.jpeg">
+				<img src="band.jpeg">
+				<img src="band.jpeg">
+				<img src="band.jpeg">
+				<img src="band.jpeg">
+				<img src="band.jpeg">
+			</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 My Personal Website</p>
+    </div>
+
+</body>
+</html>

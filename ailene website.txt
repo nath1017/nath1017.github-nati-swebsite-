@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ailene's Dynamic Page</title>
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-...YOUR_HASH..." 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --text-color: #ffffff;
+            --main-color: #176378;
+            --accent-color: #0d272e;
+        }
+
+body {
+    background-color: var(--bg-color);
+    background-image: url('image/totoro.jpg'); /* Update to use the uploaded image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+        header, footer {
+            background: var(--main-color);
+            color: var(--text-color);
+            padding: 1rem 2rem;
+        }
+
+header {
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex; /* Aligns header items in a row */
+    align-items: center; /* Centers items vertically */
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex; /* Allows the logo and title to sit side by side */
+    align-items: center; /* Vertically aligns the logo and title */
+    gap: 1rem; /* Adds space between the logo and the title */
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0.5px solid var(--main-color);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+header h3 {
+    margin: 0;
+    font-size: 1.5rem; /* Adjust font size if needed */
+    white-space: nowrap; /* Prevents the title from wrapping */
+    color: var(--text-color);
+}
+
+
+
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 1rem;
+        }
+
+nav {
+    margin-left: auto; /* Push navigation links to the far right */
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+        .hero img, .content-box img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 1rem auto;
+        }
+		
+		.hero h1 {
+			color: white; /* Set the text color to white */
+		}
+
+
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .content-box {
+            background: var(--main-color);
+            padding: 1rem;
+            border-radius: 10px;
+            max-width: 300px;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        h2, h3 {
+            color: var(--accent-color);
+        }
+
+        .page {
+            display: none;
+            padding: 6rem 2rem;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .social-btn {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background-color: var(--main-color);
+        }
+
+        .logo-link {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 0.5px solid var(--main-color);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.1);
+            border-color: var(--main-color);
+        }
+
+        .profile-pic {
+            width: 192px;
+            height: 192px;
+            border-radius: 50%;
+            border: 5px solid var(--main-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            margin: 1rem auto;
+        }
+		
+		.content-box video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional */
+}
+
+		
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <a href="#home" onclick="navigate('home')">
+            <img src="image/totoro_logo.gif" alt="Logo" class="logo-img">
+        </a>
+        <h3>Ailene's Dynamic Page</h3>
+    </div>
+    <nav>
+        <a href="#home" onclick="navigate('home')">Home</a>
+        <a href="#blog" onclick="navigate('blog')">Blog</a>
+        <a href="#flex" onclick="navigate('flex')">Flex</a>
+    </nav>
+</header>
+
+
+
+
+
+
+    <!-- Home Section -->
+    <div id="home" class="page active">
+        <section class="hero">
+            <h1>Welcome to My Webpage!</h1>
+            <p>BSEMC-DAT-1B Student.</p>
+            <img src="image/shades.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>About Me</h3>
+                    <img src="image/shrek.jpeg" alt="About Me">
+                    <p>Passionate about creativity in drawing, editing, and cooking.</p>
+                </div>
+                <div class="content-box">
+                    <h3>Hobbies</h3>
+                    <img src="image/drawing 1.jpg" alt="Hobbies">
+                    <p>I love watching K-dramas and movies, listening to music, and drawing random people.</p>
+                </div>
+                <div class="content-box">
+                    <h3>Skills</h3>
+                    <img src="image/meme.jpg" alt="Skills">
+                    <p>Cooking, editing, and creating memes.</p>
+                </div>
+				<div class="content-box">
+                    <h3>How do I see Myself 8 years from now?</h3>
+                    <video width="100%" loop controls>
+                        <source src="video/Home page.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                </div>
+        </section>
+    </div>
+
+    <!-- Blog Section -->
+    <div id="blog" class="page">
+        <h1>Blog Entries</h1>
+        <div class="content-grid">
+            <div class="content-box">
+                <h3>Infographics</h3>
+                <img src="image/Infographics.jpg" alt="Infographics">
+            </div>
+            <div class="content-box">
+                <h3>Cybercrime Case Activity</h3>
+                <img src="image/cybercrime.jpeg" alt="Cybercrime Case">
+            </div>
+			<div class="content-box">
+                <h3>HTML 1ST Activity</h3>
+                <img src="image/html1.png" alt="Cybercrime Case">
+                <img src="image/html2.png" alt="Cybercrime Case">
+            </div>
+            <div class="content-box">
+                <h3>Technology Trends Activity</h3>
+           <iframe src="Quadrumvirate-1_Quizon .pdf" width="100%" height="600px" style="border: none;"></iframe>
+            </div>
+            <div class="content-box">
+                <h3>Portfolio Wireframe Activity</h3>
+           <iframe src="Quizon_PortfolioWireframe.pdf" width="100%" height="600px" style="border: none;"></iframe>
+            </div>
+				<div class="content-box">
+					<h3>Lessons that I learned</h3>
+					<p>I enjoyed learning HTML and CSS in Introduction to Computing. HTML helped me build the structure of a webpage, while CSS allowed me to style it, making the design more appealing. It was fun to see how small changes in code could transform the layout and colors.
+
+The challenge came with applying CSS for positioning, margins, and responsiveness across different screens. It took a lot of trial and error to get the design right on both desktop and mobile. Despite the difficulty, this experience deepened my appreciation for the creativity in web design.</p>
+				</div>
+				<div class="content-box">
+					<h3>Lessons that I learned</h3>
+					<p>In Introduction to Computing, I learned about the fundamental components of a computer, such as the CPU, memory, and storage devices, and how they work together. I also explored how the operating system manages hardware and software resources to ensure smooth functionality.
+
+I then delved into algorithms and problem-solving, the history of computers, different types of software, and the importance of networking through the internet. Finally, I learned HTML and CSS, which taught me how to structure and style web pages. This course gave me a solid foundation in computing and introduced me to the basics of web development.</p>
+				</div>
+        </div>
+    </div>
+
+    <!-- Flex Section -->
+    <div id="flex" class="page">
+        <h1>Flex Projects</h1>
+        <div class="content-grid">
+            <div class="content-box">
+                <h3>Bouncing Ball</h3>
+				<video autoplay muted loop controls>
+                    <source src="video/T99_Quizon_Ball.mp4" type="video/mp4">
+                </video>            </div>
+            <div class="content-box">
+                <h3>Walking Stickman</h3>
+                <video autoplay muted loop controls>
+                    <source src="video/T99_Quizon_Stickman1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 | Created by Ailene Juanne T. Quizon</p>
+    </footer>
+
+    <script>
+        function navigate(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
